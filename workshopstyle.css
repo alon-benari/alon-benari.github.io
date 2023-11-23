@@ -1,0 +1,54 @@
+.flex-container {
+    display:flex; border-color:red;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    height:800px; 
+
+   
+    
+} 
+
+
+#cy{
+    /* display: inline-flex; */
+    /* flex-direction: column; */
+    width: 70%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    border:  1px rgba(15, 1, 1, 0.836)
+   
+
+    }
+#col {
+    /* display:inline-block; */
+    /* flex-direction: column; */
+    width:30%;
+    height:100%;
+    /* padding:2px; */
+    border:1px black solid;
+    }
+
+#plot0 {
+    width: 100%;
+    height:33.3%;
+    
+    
+   
+}
+
+#plot1 {
+    width: 100%;
+    height:33.3%;
+    
+   
+}
+
+#plot2 {
+    width: 100%;
+    height:33.3%;
+
+    
+    
+}
