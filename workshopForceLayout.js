@@ -43,7 +43,7 @@
                 style:{
                   'target-arrow-shape':'triangle',
                   'curve-style': 'bezier',
-                  'width':function(elem){return 0.1*elem.data('count')},
+                  'width':function(elem){return 0.051*elem.data('count')},
                   'line-color':'blue',
                   'opacity':0.5
                   
@@ -67,7 +67,7 @@
                               'content': 'data(label)',
                 'width':function(elem){return 10*elem.data('width')},
                 'height': function(elem){ return 10*elem.data('width')} , //'data(height)',
-                'font-size':'150px',
+                'font-size':'70px',
                 'label':'data(name)',
                 'background-color':function(elem){return elem.data('color')},
                 'background-color': 'mapData(color,0,30,green, red)'
@@ -75,19 +75,19 @@
                       },
   
                     ],
-          layout:{name:'concentric',
-            spacingFactor:5,
-            nodeSpacing:20,
+          layout:{name:'cose',
+            spacingFactor:150,
+            nodeSpacing:50,
             padding:10,
             fit:true,
-            animationDuration:1500,
+            animationDuration:2500,
             animate:true,
             // concentric:'concentric',
             boundingBox: { // to give cola more space to resolve initial overlaps
                   x1: 0,
                   y1: 0,
-                  x2: 10000,
-                  y2: 10000
+                  x2: 15000,
+                  y2: 15000
                 }
                 },
           
