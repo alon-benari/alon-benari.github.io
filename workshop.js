@@ -65,8 +65,8 @@
               selector: 'node',
               style: {
                               'content': 'data(label)',
-                'width':function(elem){return 10*elem.data('width')},
-                'height': function(elem){ return 10*elem.data('width')} , //'data(height)',
+                'width':function(elem){return 30*elem.data('width')},
+                'height': function(elem){ return 30*elem.data('width')} , //'data(height)',
                 'font-size':'150px',
                 'label':'data(name)',
                 'background-color':function(elem){return elem.data('color')},
