@@ -43,7 +43,7 @@
                 style:{
                   'target-arrow-shape':'triangle',
                   'curve-style': 'bezier',
-                  'width':function(elem){return 0.1*elem.data('count')},
+                  'width':function(elem){return 0.3*elem.data('count')},
                   'line-color':'blue',
                   'opacity':0.5
                   
