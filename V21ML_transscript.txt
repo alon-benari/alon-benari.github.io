@@ -1,0 +1,145 @@
+
+
+Slide 0: Machine learning has been a solid topic in research and industry for at least 20 years,
+some of the algorithms we are using today were around for
+at least a decade. Scalable computing that ushered the term of Big Data/ cloud computing has also been around for at least a decade.
+Recent develpment in hardware made it possible to realize  what was only envisioned on paper. 
+These elements matured over the past few
+years and has broken into the public realm of opinion on a scale in Nov 2022, when openAI came out with their langauge transformer
+implementation otherwise known as ChatGPT. The rest is histroy. Asking what this technology can do for healthcare has been high on 
+the mind of many large an small enterprises and in an extra-ordinary turn of events the regulator stepped very quickly into the picture
+as we have heard from Mr Muller, and read in multiple other channels. Admittedly this is a complex topic to handle from many aspects, 
+starting that speaking about machine learning is not trivial in our healthcare system let alone 
+what is can do and what changes it many
+effect.
+
+What I want to do in the next 30 minutes or so is draw a equal part clear and feasible vision of what can be done in ML 
+application for our 
+organization, where we might needs some help and get to the finishing line without rolling over. 
+
+
+slide 1:
+
+I will strat by saying that the enterprise is endowed with a good amount of resources. Many are familiar with CDW for operation, 
+many write SQL queries, have the option of projecting resultson PowerBI and share. Palantir arrived in VHA in 2020 around the time of
+the vaccines, this is a very mature product to produce pipelines for data analysis, 
+
+Slide 2:
+That does not mean we do not have our problems, main the issue of skilled  staff. 10/2022, OPM came up with a new job series for data
+scientists, allowed direct hire and yet the field is wanting.
+
+
+
+slide 3:
+Lastly, of note when I look at these points based on my experience, I think of managing the  what one would call the human factor, admittedly the salient 
+factor in success of any project. Making the right selection for a project, devising the correct workflow, and then lastly, 
+deployment, although we  now more options and things are getting better, and lastly managing the complexities of deployment failures
+the pipeline.
+
+slide 4
+And yet I believe we have a path forward.  We heard and will contiue to hear a great deal on the language that governs what are the 
+requirements that would satisfy ML deployment, I dont think that at this time humanity or the technology are ready for trusting predicitve
+ modelling to make suggestions about clinical decision let alone critical one I believe the most advanced field are probably
+  Radiology where a human-computer interface  has so far shown promise. Regardless, listening to the discussion I dont believe society 
+  is ready to trust this technolgoy. With that said  I think there is still agood 
+amount of room to do meaningful work in machine learning that is aiming at helping what I call admino-clinical work. 
+
+
+
+slide 5:
+
+Bicycle to the mind, this really speaks to scalability. The ability to use a machine t scale our ability to reason.
+Machine learning can really do 3 things we need to bear in mind classify, predict and suggest a course of action given a set of rewards
+or constraints.
+WIth those in mind I wish to walk you through some ideas of feasible projects, some already realized.
+
+Slide 6 
+predict care in the community, this is actually something we did implement in NorCal circa 2022, in preparation for implementing 
+the AIR commission recomendation, where NorCal took several counties from  from Palo Alto that grew the patient population base by som 20-25%.
+The question was trying to predict the expectation of CITC services given patient count in a county.
+This ws implemented using the Palantir data stores, I eventually had to move it out of Palantir fr the purpose of visualization, but 
+this could have easily on palantir just the same. So if this look like LEAF to some of you in the audience
+
+I mentioned  trying to think in scale, so I took this idea further and asked what is the expectation for f2f visits given 
+a patient population size.
+
+Again dont let  the seemingly straight line fool you, the axes have been transformed.
+But again, we see that there is a clearly a pattern to this that can modelled and probably  useful for prediction.
+
+What you saw here are collectively called scaling laws. 
+This is an exmaple of using modelling to support decision making at an operational level, quite readily available to the enterprise with no 
+need for any special machinery.
+
+Slide 7: Care coordination
+
+This is clearly a large topic on the minds of many. An the question is what can machine learning do for care coordination.
+For that we need to come a bit closer and cast the questions in mind in the form whereby a machine can address them.
+It starts with a better understanding of the problem.
+
+I wish to briefly  walk you through an example and what it do for us. Again, the topic is consults, and the question is who consults who
+in a large healthcare system. This is actually something we have just submitted for publication. We borrow the idea of a social network 
+Which is a versatile data structure in computer science that has been useful for many.
+
+So lets start with putting some clinics.
+Lets create edges or links betwen them.
+Lets have some more.
+
+Lets add some color in life, we can denote the edges as a clinic with a specific overflow etc.
+
+ok, So I think you got the general idea or this lets take a look at how a healthcare system.
+I believe this is a good representation of a bird eye view of whats happening in the referrals across a given HCS.
+
+we will return to it 
+
+Slide 8: 
+Looking for extreme patterms of referrals. This would be an after thought If we were in the financial or insurance business, this 
+ question would be on everyones' mind really. The use/abuse of resources. 
+borrowing ideas from cybersecurity and financial fraud, attempting to detect what we might call extreme transations. Machine learning can
+  do great deal with this. If anything to ascertain the business is happening with in the expected variability. American tax payer
+  is paying for this after all.
+
+WHat you are going to look at was a finding that came up from using such analysis, that any untrained human eye can observe.
+Machine learning can do much more.
+
+This finding shows a good amount of traffic between MH and Community Care. 
+
+Slide  9:
+Clinical semantics as we understand it is mostly composed of text. Clearly there has been an effort to use codes to capture this
+kind of semantics, but this effrot is only partly succesful especially because it is heavily reliant on the human factor.
+What about those entities that dont have a code.?
+
+So this is a relatively new thing from the past few weeks, We are currently gearing toward abstracting surgical complications that are hard to identify
+and that have no ICD10 codes. I can speak to identifying etiology for surgical revision following TkAs. There is a code for 
+Knee revision, but not the etiology that brought the patients into the OR.
+I can speak with certainty that this can be done.
+This could be done on existing  models and hardware, or options with specifically trained LLMs can be harnessed.
+
+
+
+
+Slide 10:
+Since I mentioned LLMs, this bring us to the next topic:
+I want to move  to other applications, those that take advantage of LLMs, again supporting the clinico-admin staff.
+This is something I implemented on my lap top after work, using a local LLM instal
+I went ahead and used the VISTA documentation library documentation, which is freely available online, and built a simple AI agent that serves 
+as a bot for a referencing question for CACs. Once deployed this could be a resource for many others across the country, 
+It can further augmented by CAC notes and meeting and how tos CAC accrue over the years.
+What  you are seeing here is a very skeletal version, through more work is needed  it is feasible on current machinery.
+
+Slide 11:
+I mentioned in brief that I used an AI-agent, these are software entities that leverage LLM to understand human language command, 
+a set of tools they are equiped with and a memory to maintain the history and the context of the task.
+So we have an entity that understands commands, equiped with tools and can reason on the outcomes of its work and tak further steps.
+Now I want you to think about a group of such agent, or a crew of such agents tasked with carryong out a task.
+This is the frontier  of where AI is today.
+
+
+I want to take  moment and give credit to a friend and a colleague of mine called Dr Andrew Borkowski from VISN 8, who piqued my interest in Ai Agents 
+and suggested we put a piece together on AI agents specifically its applictions in healthcare.  We most recently put it on a pre-print 
+server for review and comments, this is where ou can find it for those of you who to dive deeper on what this technolgoy 
+is about and what it can do for us. We will look for a place for it in the coming weekds.
+
+
+Slide 12:
+
+I wish to high light an interesting point. Mr Chuck Zeilman  CHIO for Tampa
